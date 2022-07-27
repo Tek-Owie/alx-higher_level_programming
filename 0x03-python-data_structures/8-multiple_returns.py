@@ -6,4 +6,4 @@ def multiple_returns(sentence):
     else:
         length, first = len(sentence), sentence[0]
     new_tuple = (length, first)
-    print("Length: {:d} - First character: {}".format(length, first))
+    print("Length: {:d} - First character: {}".format(new_tuple[0], new_tuple[1]))
