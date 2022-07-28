@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 def best_score(a_dictionary):
-    highest = -float('inf')
-    key = None
-    for k,v in a_dictionary.items():
-        if v > highest:
-            highest = v
-            key = k
-    return key
+    if my_dict and len(my_dict):
+        max = list(my_dict.keys())[0]
+        for key in my_dict:
+            if my_dict[key] > my_dict[max]:
+                max = key
+        return max
+    return None
