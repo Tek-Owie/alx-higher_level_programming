@@ -29,6 +29,11 @@ class Square:
 
     def my_print(self):
         """prints the area with #"""
-        for i in self.__size:
-            for j in self.__size:
-                print('#' * self__size)
+        if self.__size == 0:
+            print()
+            return
+        else:
+            for i in self.__size:
+                for j in self.__size:
+                    print('#' * self__size)
+        
