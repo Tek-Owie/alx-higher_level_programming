@@ -1,0 +1,53 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+Importing the function from the module:
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Checking for module docstring:
+        >>> md = __import__('0-add_integer').__doc__
+        >>> len(md) > 1
+        True
+
+Checking for function docstring:
+        >>> fd = __import__('0-add_integer').add_integer.__doc__
+        >>> len(fd) > 1
+        True
+
+Trying with 2 int args:
+        >>> print(add_integer(1, 2))
+        3
+
+Trying with a -ve int arg:
+        >>> print(add_integer(100, -2))
+        98
+
+Trying with 1 arg:
+        >>> print(add_integer(2))
+        100
+
+Trying with a float and -ve int args:
+        >>> print(add_integer(100.3, -2))
+        98
+
+Trying with an int and string:
+        >>> print(add_integer(4, "School"))
+        Traceback (most recent call last):
+            ...
+        TypeError: b must be an integerb must be an integer
+
+Trying to cast None to an int:
+        >>> print(add_integer(None))
+        Traceback (most recent call last):
+            ...
+        TypeError: b must be an integerb must be an integer
+
+Trying with no args:
+        >>> print(add_integer())
+        Traceback (most recent call last):
+            ...
+        TypeError: add_integer() missing 1 required positional argument: 'a'
+
