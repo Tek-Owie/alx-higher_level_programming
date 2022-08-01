@@ -36,18 +36,18 @@ Trying with a float and -ve int args:
 Trying with an int and string:
         >>> print(add_integer(4, "School"))
         Traceback (most recent call last):
-            ...
+        ...
         TypeError: b must be an integerb must be an integer
 
 Trying to cast None to an int:
         >>> print(add_integer(None))
         Traceback (most recent call last):
-            ...
+        ...
         TypeError: b must be an integerb must be an integer
 
 Trying with no args:
         >>> print(add_integer())
         Traceback (most recent call last):
-            ...
+        ...
         TypeError: add_integer() missing 1 required positional argument: 'a'
 
