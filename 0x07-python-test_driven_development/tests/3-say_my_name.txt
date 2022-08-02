@@ -1,0 +1,34 @@
+The ``3-say_my_name`` Module
+============================
+
+Using ``say_my_name``
+-------------------
+
+Importing the function from the module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Checking for module docstring:
+	>>> m = __import__('3-say_my_name').__doc__
+	>>> len(m) > 1
+	True
+
+Checking for function docstring:
+	>>> f = __import__('3-say_my_name').say_my_name.__doc__
+	>>> len(f) > 1
+	True
+
+Checking for two str args:
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+Checking for one str arg:
+	>>> say_my_name("Bob")
+	My name is Bob
+
+Checking for one int arg and str arg:
+	>>> try:
+		say_my_name(12, "White")
+	    except Exception as e:
+		print(e)    
+	first_name must be a string
+
