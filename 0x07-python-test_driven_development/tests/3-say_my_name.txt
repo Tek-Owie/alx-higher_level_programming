@@ -32,3 +32,27 @@ Checking for one int arg and str arg:
 		print(e)    
 	first_name must be a string
 
+Checking for None as an arg:
+	>>> say_my_name(None, "Hello")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+Checking for int last name:
+	>>> say_my_name("Sandra", 4)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+Checking for None as an arg:
+	>>> say_my_name("Hello", None)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+Checking for 3 args:
+	>>> say_my_name("Boss", "Hello", "Niat")
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
