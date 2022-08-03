@@ -26,33 +26,37 @@ Checking for one str arg:
 	My name is Bob
 
 Checking for one int arg and str arg:
-	>>> try:
-		say_my_name(12, "White")
-	    except Exception as e:
-		print(e)    
-	first_name must be a string
+	>>> say_my_name(12, "White") # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
 
 Checking for None as an arg:
-	>>> say_my_name(None, "Hello")
+	>>> say_my_name(None, "Hello") # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
 	...
 	TypeError: first_name must be a string
 
 Checking for int last name:
-	>>> say_my_name("Sandra", 4)
+	>>> say_my_name("Sandra", 4) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
 	...
 	TypeError: last_name must be a string
 
 Checking for None as an arg:
-	>>> say_my_name("Hello", None)
+	>>> say_my_name("Hello", None) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
 	...
 	TypeError: last_name must be a string
 
 Checking for 3 args:
-	>>> say_my_name("Boss", "Hello", "Niat")
+	>>> say_my_name("Boss", "Hello", "Niat") # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
 	...
 	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 
+Checking for a list of str:
+	 >>> say_my_name('First', ['Last', Susie']) # doctest: +IGNORE_EXCEPTION_DETAIL
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: last_name must be a string
