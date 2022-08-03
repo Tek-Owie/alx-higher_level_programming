@@ -28,7 +28,7 @@ Checking for two str args:
 Checking for one str arg:
 
 	>>> say_my_name("Bob")
-	My name is Bob
+	My name is Bob 
 
 Checking for one int arg and str arg:
 
@@ -67,7 +67,7 @@ Checking for 3 args:
 
 Checking for a list of str:
 
-	>>> say_my_name('First', ['Last', Susie']) # doctest: +IGNORE_EXCEPTION_DETAIL
+	>>> say_my_name('First', ['Last', 'Susie']) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
 	...
 	TypeError: last_name must be a string
@@ -83,3 +83,4 @@ Checking for no arg:
 	Traceback (most recent call last):
 	...
 	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
