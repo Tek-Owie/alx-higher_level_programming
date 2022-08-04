@@ -9,6 +9,6 @@ def inherits_from(obj, a_class):
     obj - the object to be checked
     a_class - the class to check
     """
-    if issubclass(obj, a_class):
+    if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
     return False
