@@ -1,0 +1,76 @@
+The ``7-base_geometry`` module
+==============================
+
+Using ``BaseGeometry``
+----------------------
+
+Importing the class from the module:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking for module docstring:
+
+	>>> mod = __import__('7-base_geometry').__doc__
+	>>> len(mod) > 1
+	True
+
+Checking for class docstring:
+
+	>>> cld = __import__('7-base_geometry').BaseGeometry.__doc__
+	>>> len(cld) > 1
+	True
+
+Checking for method docstring:
+
+	>>> med = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+	>>> len(med) > 1
+	True
+
+Checking for int values:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 12)
+	
+Checking for zero value:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: my_int must be greater than 0
+
+Checking for slightly greater than 0:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 0.1)
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+Checking for very large int value:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 999999999999999999999999999)
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+Checking for other data types:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 1.1)
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", "last")
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", True)
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
