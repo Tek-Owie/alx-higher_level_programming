@@ -30,6 +30,35 @@ Checking for int values:
 
 	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("my_int", 12)
+
+Checking for no args:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() takes exactly 3 arguments (1 given)
+
+Checking for one arg:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(12)
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() takes exactly 3 arguments (2 given)
+
+Checking for only str arg:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int")
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() takes exactly 3 arguments (2 given)
+
+Checking for none and int values:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(None, 12)
 	
 Checking for zero value:
 
@@ -74,3 +103,33 @@ Checking for other data types:
 	Traceback (most recent call last):
 	...
 	TypeError: my_int must be an integer
+	
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", None)
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", (2,2))
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+	
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("", 2)
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", {2,3})
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(3, 3, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() takes exactly 3 arguments (4 given)
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(2, 2)
