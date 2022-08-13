@@ -17,8 +17,8 @@ class Rectangle(BaseGeometry):
         :rtype: nothing.
         """
 
-        self.integer_validator('width', width)
-        self.integer_validator('height', height)
+        BaseGeometry.integer_validator(self, 'width', width)
+        BaseGeometry.integer_validator(self, 'height', height)
 
         self.__width = width
         self.__height = height
