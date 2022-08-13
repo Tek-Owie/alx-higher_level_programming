@@ -32,15 +32,6 @@ class Rectangle(BaseGeometry):
 
         return self.__width * self.__height
 
-    def __print__(self):
-        """Print the rectangle description.
-
-        :param - self
-        :rtype - string description of rectangle
-        """
-
-        print("[Rectangle] {:d}/{:d}".format(self.__width, self.__height))
-
     def __str__(self):
         """Return the string description of the rectangle.
 
@@ -48,4 +39,4 @@ class Rectangle(BaseGeometry):
         :rtype - string description of rectangle.
         """
 
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+        return ("[Rectangle] " + str(self.__width) + "/" + str(self.__height))
