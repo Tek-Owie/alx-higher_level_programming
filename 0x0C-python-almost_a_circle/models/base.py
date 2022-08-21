@@ -11,9 +11,16 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize the Base class with an id attr."""
+        """Initialize the Base class.
+        
+        Args:
+            id (int): The identity of the new Base.
+        Return:
+            A new instance of Base.
+        """
 
         if id is not None:
             self.id = id
-        __nb_objects += 1
-        self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
