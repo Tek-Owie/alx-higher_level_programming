@@ -26,6 +26,11 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """Return the string representation of the rectangle."""
+
+        return ("[Rectangle]" + str(self.id) + str(self.__x) + "/" + str(self.__y) + "-" + str(self.__width) + "/" + str(self.__height))
+
     @property
     def width(self):
         """Return the value of width."""
