@@ -29,7 +29,7 @@ class Rectangle(Base):
     def __str__(self):
         """Return the string representation of the rectangle."""
 
-        return ("[Rectangle]" + str(self.id) + str(self.__x) + "/" + str(self.__y) + "-" + str(self.__width) + "/" + str(self.__height))
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     @property
     def width(self):
