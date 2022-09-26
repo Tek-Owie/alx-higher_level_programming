@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#square.py
 """
 This module contains the Square class which 
 inherits from the Rectangle class.
@@ -21,6 +22,6 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return a str representation of the Square instance."""
-        return "[Square] ({}) {}/{} - {}".format(self.id
-                                                 self.x, self.y
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x, self.y,
                                                  self.size)
