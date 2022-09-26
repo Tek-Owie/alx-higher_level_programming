@@ -118,11 +118,23 @@ class Rectangle(Base):
             5th argument should be the y attribute
         """
 
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        if args and len(args) != 0:
+            count = 0
+            for arg in args:
+                if count == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif count == 1:
+                    self.width = arg
+                elif count == 2:
+                    self.height = arg
+                elif count == 3:
+                    self.x = arg
+                elif count == 4:
+                    self.y = arg
+                count += 1
 
     def __str__(self):
         """Return the string representation of the rectangle."""
