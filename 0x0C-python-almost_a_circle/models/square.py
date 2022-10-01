@@ -18,12 +18,18 @@ class Square(Rectangle):
             y - positive integer
             id - positive integer
         """
+
         super().__init__(size, size, x, y, id)
 
 
     @property
     def size(self):
-        """Return the size of a sqaure instance."""
+        """Return the size of a sqaure instance.
+            Arg:
+                None
+            Return:
+                Size (int)
+        """
 
         return self.width
 
@@ -42,7 +48,12 @@ class Square(Rectangle):
 
 
     def __str__(self):
-        """Return a str representation of the Square instance."""
+        """Return a str representation of the Square instance.
+            Arg:
+                None
+            Return:
+                str
+        """
 
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
