@@ -20,6 +20,11 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        """Return the size of a sqaure instance."""
+        return self.width
+
     @size.setter
     def size(self, value):
         """Set the value of width and height of the square.
@@ -30,11 +35,6 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-
-    @property
-    def size(self):
-        """Return the size of a square instance."""
-        return self.width
 
     def __str__(self):
         """Return a str representation of the Square instance."""
