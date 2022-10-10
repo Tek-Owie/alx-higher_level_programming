@@ -2,10 +2,10 @@
 
 const process = require('process');
 
-const processArg = process.argv;
+const processArg = process.argv[2];
 
-if (!parseInt(processArg[2])) {
+if (!parseInt(processArg)) {
   console.log('Not a number');
 } else {
-  console.log(parseInt(processArg[2]));
+  console.log(`My number: ${parseInt(processArg)}`);
 }
