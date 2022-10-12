@@ -7,8 +7,8 @@ import MySQLdb
 def mysqlconnect(mysql_username, mysql_password, database_name):
     """connects to the sqldb and executes queries"""
 
-    db_connect = MySQLdb.connect("localhost@3306", mysql_username,\
-                                 mysql_password, database_name)
+    db_connect = MySQLdb.connect(host="localhost@3306", user=mysql_username,\
+                                 passwd=mysql_password, db=database_name)
 
     cursor = db_connect.cursor()
 
@@ -17,5 +17,5 @@ def mysqlconnect(mysql_username, mysql_password, database_name):
     db_connect.close()
 
 
-if "__main__" == "__name__":
+if __name__ == "__main__":
     mysqlconnect()
